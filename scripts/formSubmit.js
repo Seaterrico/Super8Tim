@@ -12,13 +12,13 @@ function onSubmit(token) {
             .then(response => response.json())
             .then(data => {
                 if (data.status === 'success') {
-                    window.location.href = "thankyou.html";
+                    window.location.href = "/pages/thankyou.html";
                 } else {
-                    window.location.href = "formFailed.html";
+                    window.location.href = "/pages/formFailed.html";
                 }
             })
             .catch(err => {
-                window.location.href = "formFailed.html";
+                window.location.href = "/pages/formFailed.html";
                 console.error(err);
             }).finally(() => {
                 document.body.classList.remove('loading');
