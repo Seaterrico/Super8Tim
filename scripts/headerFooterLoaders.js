@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             document.getElementById("header-container").innerHTML = data;
         });
+    fixHeaderLinks();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,3 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("footer-container").innerHTML = data;
         });
 });
+
+function fixHeaderLinks() {
+    const isInPages = window.location.pathname.includes("/pages/");
+    const prefix = isInPages ? ".." : ".";
+
+    document.getElementById("home-link").setAttribute("href", `${prefix}/index.html`);
+    document.getElementById("packages-link").setAttribute("href", `${prefix}/pages/packages.html`);
+    document.getElementById("contact-link").setAttribute("href", `${prefix}/pages/packages.html`);
+}
