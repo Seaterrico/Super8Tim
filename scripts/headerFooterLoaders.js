@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const prefix = isInPages ? ".." : ".";
 
             document.getElementById("home-link").setAttribute("href", `${prefix}/index.html`);
-            document.getElementById("home-logo").setAttribute("href", `${prefix}/index.html`);
+            document.getElementById("logo-link").setAttribute("href", `${prefix}/index.html`);
             document.getElementById("package-link").setAttribute("href", `${prefix}/pages/packages.html`);
             document.getElementById("contact-link").setAttribute("href", `${prefix}/pages/contact.html`);
         });
