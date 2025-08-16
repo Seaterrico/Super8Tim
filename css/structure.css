@@ -220,6 +220,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 500px;
 }
 
 .overlay-text-package {
@@ -229,6 +230,12 @@ header {
     z-index: 2;
     text-align: center;
     width: 550px;
+}
+
+@media (max-height: 680px) {
+    .overlay-text-package {
+        width: 800px;
+    }
 }
 
 .overlay-text-package h1 {
@@ -277,7 +284,6 @@ header {
 /* Form stuff */
 .form-page {
     display: flex;
-    /* padding-top: 75px; */
     background: #0a1f5c;
     height: 100vh;
     min-height: 900px;
@@ -295,7 +301,7 @@ header {
     display: grid;
     place-items: center;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 50px;
 }
 
 .form-label {
